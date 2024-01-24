@@ -1,15 +1,16 @@
 import React from 'react'
 import styles from "./Hero.module.css"
-import {ReactComponent as HeroImg} from "../../assets/HeroImg"
+import HeroImg from "../../assets/HeroImg.png"
 
 const Hero = () => {
   return (
-    <div>
-        <div>
-            <h1></h1>
+    <div className={styles.hero}>
+        <div >
+            <h1>100 Thousonad Songs, ad-free</h1>
+            <h1>Over thousands podcast episodes</h1>
         </div>
         <div>
-            <img width={212} src={HeroImg} alt="Headphone" />
+            <img width={212}  src={HeroImg} alt="Headphone" />
         </div>
       
     </div>
