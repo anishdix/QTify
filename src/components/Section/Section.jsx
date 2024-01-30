@@ -3,8 +3,9 @@ import styles from "./Section.module.css"
 import {  CircularProgress } from '@mui/material'
 import Card from '../Card/Card'
 import Carousel from '../Carousel/Carousel'
+import BasicTabs from '../Tabs/Tabs'
 
-const Section = ({data,title,type}) => {
+const Section = ({data,title,type,value=0,handleChange=null,isSong}) => {
   const [carouselToggel,setCarouselToggel]=useState(true)
   const handleToggle=()=>{
     setCarouselToggel(!carouselToggel)
@@ -14,10 +15,14 @@ const Section = ({data,title,type}) => {
       <div className={styles.header}>
         <h3>{title}</h3>
         <h4 className={styles.toggleText} onClick={handleToggle}>
-          {!carouselToggel?"Collapse All":"Show All"}
+          {!isSong?
+          !carouselToggel?"Collapse All":"Show All"
+          :
+          null}
           
         </h4>
         </div>
+        {type==="song"?(<BasicTabs data={data} value={value} handleChange={handleChange}/>):null}
         {
           data.length===0?(
             <CircularProgress/>

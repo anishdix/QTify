@@ -12,8 +12,8 @@ const Controls=({data})=>{
   const swiper = useSwiper(data);
   useEffect(() => {
     swiper.slideTo(0, null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [data]);
+    
+}, [data,swiper]);
 return <></>
   
 
@@ -25,7 +25,7 @@ const Carousel = ({data,renderComponent}) => {
         <Swiper 
         style={{padding:"0px 20px"}} 
         initialSlide={0} 
-        slidesPerView={7}
+        slidesPerView={"auto"}
         spaceBetween={40} 
         allowTouchMove >
             <Controls data={data}/>

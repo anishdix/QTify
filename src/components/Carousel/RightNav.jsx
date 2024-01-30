@@ -16,7 +16,7 @@ useEffect(()=>{
 
   return (
     <div className={styles.RightNav}>
-      {!End&&<RightArrow onClick={()=>swiper.slideNext()}/>}
+      {!End?<RightArrow onClick={()=>swiper.slideNext()}/>:null}
     </div>
   )
 }

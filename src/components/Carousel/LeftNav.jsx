@@ -15,7 +15,7 @@ useEffect(()=>{
 
   return (
     <div className={styles.LeftNav}>
-      {!isBeginning&&<LeftArrow onClick={()=>swiper.slidePrev()}/>}
+      {!isBeginning?<LeftArrow onClick={()=>swiper.slidePrev()}/>:null}
     </div>
   )
 }
