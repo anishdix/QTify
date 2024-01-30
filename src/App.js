@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from './api/api'
 import Section from './components/Section/Section'
-
+import styles from "./App.module.css"
 const App = () => {
   const [topAlbumsData,setTopAlbumsData]=useState([])
   const [NewAlumsData,setNewAlumsData]=useState([])
@@ -99,9 +99,12 @@ const generateAllSongData=async ()=>{
         )
 
       } */}
+      <div className={styles.sectionWrapper}>
+
       <Section data={topAlbumsData} title="Top Albums" type="album"/>
       <Section data={NewAlumsData} title="New Albums" type="album"/>
       <Section data={filter} title="Songs" type="song" value={value} handleChange={handleChange} isSong={true}/>
+      </div>
     </div>
   );
 }
