@@ -9,12 +9,10 @@ const App = () => {
   const [NewAlumsData,setNewAlumsData]=useState([])
   const [songsData,setSongsData]=useState([])
   const [filter,setFilter]=useState([])
-  const [toggle,setToggle]=useState(false)
+ 
   const [value,setValue]=useState(0)
 
-  const handleToggle=()=>{
-      setToggle(!toggle)
-  }
+  
   const handleChange=(e,newValue)=>{
       setValue(newValue)
   }

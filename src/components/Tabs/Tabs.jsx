@@ -43,12 +43,12 @@ function a11yProps(index) {
 export default function BasicTabs({data,value,handleChange}) {
   
 
- console.log("value",value)
+//  console.log("value",value)
 
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" textColor='white'>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{color:"white"}}>
           <Tab label="All" {...a11yProps(0)} />
           <Tab label="Rock" {...a11yProps(1)} />
           <Tab label="Pop" {...a11yProps(2)} />

@@ -35,16 +35,12 @@ const Card = ({data,type}) => {
                          <div className={styles.card}>
                                 <img src={image} alt="song"/>
                                 <div className={styles.banner}>
-                                    <div className={styles.pill}>
-                                        <p>{likes} Likes</p>
-                                    </div>
+                                <Chip className={styles.chip} label={`${likes} Likes`} size="small" />
                                 </div>
                             </div>
                             <div className={styles.titleWrapper}>
-                                <p>
-                                    {title}
-                                </p>
-                            </div>
+                            <p>{title}</p>
+                        </div>
 
 
                     </div>
