@@ -59,6 +59,8 @@ export default function BasicTabs({data,value,handleChange}) {
           <Tab label="All" {...a11yProps(0)} />
           <Tab label="Rock" {...a11yProps(1)} />
           <Tab label="Pop" {...a11yProps(2)} />
+          <Tab label="Jazz" {...a11yProps(3)} />
+          <Tab label="Blues" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -68,6 +70,12 @@ export default function BasicTabs({data,value,handleChange}) {
       <Carousel data={data} renderComponent={(data)=><Card data={data} type="songs" key={data.id}/>}/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
+      <Carousel data={data} renderComponent={(data)=><Card data={data} type="songs" key={data.id}/>}/>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3}>
+      <Carousel data={data} renderComponent={(data)=><Card data={data} type="songs" key={data.id}/>}/>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={4}>
       <Carousel data={data} renderComponent={(data)=><Card data={data} type="songs" key={data.id}/>}/>
       </CustomTabPanel>
     </Box>

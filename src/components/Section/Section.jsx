@@ -5,7 +5,7 @@ import Card from '../Card/Card'
 import Carousel from '../Carousel/Carousel'
 import BasicTabs from '../Tabs/Tabs'
 
-const Section = ({data,title,type,value=0,handleChange=null,isSong}) => {
+const Section = ({data,title,type,value=0,handleChange=null}) => {
   const [carouselToggel,setCarouselToggel]=useState(true)
   const handleToggle=()=>{
     setCarouselToggel(!carouselToggel)
@@ -15,10 +15,11 @@ const Section = ({data,title,type,value=0,handleChange=null,isSong}) => {
       <div className={styles.header}>
         <h3>{title}</h3>
         <h4 className={styles.toggleText} onClick={handleToggle}>
-          {!isSong?
-          !carouselToggel?"Collapse All":"Show All"
+          {type==="song"?
+          null
           :
-          null}
+          !carouselToggel?"Collapse All":"Show All"
+          }
           
         </h4>
         </div>

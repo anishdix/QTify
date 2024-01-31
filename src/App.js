@@ -34,6 +34,14 @@ const App = () => {
     {
       key="pop";
     }
+    else if(value===3)
+    {
+      key="jazz";
+    }
+    else if(value===4)
+    {
+      key="blues";
+    }
     const res=songsData.filter((item)=>item.genre.key===key)
     filterData(res)
 
@@ -102,8 +110,11 @@ const generateAllSongData=async ()=>{
 
       <Section data={topAlbumsData} title="Top Albums" type="album"/>
       <Section data={NewAlumsData} title="New Albums" type="album"/>
-      <Section data={filter} title="Songs" type="song" value={value} handleChange={handleChange} isSong={true}/>
       </div>
+      {/* <div className={styles.songs}>
+
+      <Section data={filter} title="Songs" type="song" value={value} handleChange={handleChange} />
+      </div> */}
     </div>
   );
 }
