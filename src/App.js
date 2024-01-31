@@ -14,6 +14,7 @@ const App = () => {
 
   
   const handleChange=(e,newValue)=>{
+    console.log(newValue,"newVal")
       setValue(newValue)
   }
 

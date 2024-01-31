@@ -9,6 +9,6 @@
 .songs{
     border-top: 1px solid var(--color-primary);
     border-bottom: 1px solid var(--color-primary);
-    padding: 15px 30px 15px;
-    gap: 32px;
+    padding: 10px 30px 0px ;
+    
 }
