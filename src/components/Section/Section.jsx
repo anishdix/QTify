@@ -11,7 +11,7 @@ const Section = ({data,title,type,value=0,handleChange=null}) => {
     setCarouselToggel(!carouselToggel)
   }
   return (
-    <div>
+    <>
       <div className={styles.header}>
         <h3>{title}</h3>
         <h4 className={styles.toggleText} onClick={handleToggle}>
@@ -37,12 +37,12 @@ const Section = ({data,title,type,value=0,handleChange=null}) => {
                 :
                 (<Carousel data={data} renderComponent={(data)=><Card data={data} type={type} key={data.id}/>}/>)
               
-            }
+              }
             </div>
           )
         }
-      
-    </div>
+    
+        </>
   )
 }
 

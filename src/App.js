@@ -113,7 +113,6 @@ const generateAllSongData=async ()=>{
       <Section data={NewAlumsData} title="New Albums" type="album"/>
       </div>
       <div className={styles.songs}>
-
       <Section data={filter} title="Songs" type="song" value={value} handleChange={handleChange} />
       </div>
     </div>
