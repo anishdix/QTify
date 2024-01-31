@@ -5,7 +5,7 @@ import Card from '../Card/Card'
 import Carousel from '../Carousel/Carousel'
 import BasicTabs from '../Tabs/Tabs'
 
-const Section = ({data,title,type,value=0,handleChange=null}) => {
+const Section = ({data,title,type,value,handleChange=null}) => {
   const [carouselToggel,setCarouselToggel]=useState(true)
   const handleToggle=()=>{
     setCarouselToggel(!carouselToggel)

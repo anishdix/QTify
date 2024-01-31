@@ -46,8 +46,8 @@ export default function BasicTabs({data,value,handleChange}) {
 //  console.log("value",value)
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Box sx={{ width: '100%',}}>
+      
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" textColor='white' TabIndicatorProps={{
     style: {
       backgroundColor: "#34c94b",
@@ -62,8 +62,8 @@ export default function BasicTabs({data,value,handleChange}) {
           <Tab label="Jazz" {...a11yProps(3)} />
           <Tab label="Blues" {...a11yProps(4)} />
         </Tabs>
-      </Box>
-      <CustomTabPanel value={value} index={0}>
+      
+      <CustomTabPanel value={value} index={0} sx={{padding:"24px 0px" }}>
       <Carousel data={data} renderComponent={(data)=><Card data={data} type="songs" key={data.id}/>}/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
