@@ -23,15 +23,14 @@ const Section = ({data,title,type,value=0,handleChange=null}) => {
           
         </h4>
         </div>
-        {type==="song"?(<BasicTabs data={data} value={value} handleChange={handleChange}/>):null}
-        {
+        {type==="song"?null:
           data.length===0?(
             <CircularProgress/>
-          ):(
-            <div className={styles.cardWrapper}>
+            ):(
+              <div className={styles.cardWrapper}>
               {
                 !carouselToggel?(<div className={styles.wrapper}>{
-                data.map((ele)=>{return (<Card data={ele} type={type} key={ele.id}/> )})
+                  data.map((ele)=>{return (<Card data={ele} type={type} key={ele.id}/> )})
                 }
                 </div>)
                 :
@@ -40,7 +39,9 @@ const Section = ({data,title,type,value=0,handleChange=null}) => {
               }
             </div>
           )
+        
         }
+        {type==="song"?(<BasicTabs data={data} value={value} handleChange={handleChange}/>):null}
     
         </>
   )
